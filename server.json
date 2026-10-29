@@ -1,0 +1,26 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.4robot/hexadata",
+    "description": "Official public data as MCP tools: EU tenders (TED), US federal contracts (SAM.gov), US healthcare providers (NPI Registry), UK Companies House, Mexican business directories and jobs. Pay per result via Apify.",
+    "repository": {
+        "url": "https://github.com/4robot/hexadata-mcp",
+        "source": "github"
+    },
+    "version": "1.0.0",
+    "websiteUrl": "https://apify.com/hexadatalabs",
+    "remotes": [
+        {
+            "type": "streamable-http",
+            "url": "https://mcp.apify.com?tools=hexadatalabs/eu-tenders-ted-scraper,hexadatalabs/sam-gov-opportunities-scraper,hexadatalabs/us-healthcare-providers-npi-scraper,hexadatalabs/uk-companies-house-scraper,hexadatalabs/mexico-business-directory-denue,hexadatalabs/occ-mundial-jobs-scraper,hexadatalabs/seccion-amarilla-business-scraper",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "description": "Apify API token as a Bearer token (https://console.apify.com/settings/integrations)",
+                    "isRequired": true,
+                    "isSecret": true,
+                    "format": "string"
+                }
+            ]
+        }
+    ]
+}
